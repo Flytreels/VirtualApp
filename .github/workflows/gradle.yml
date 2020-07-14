@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Grant execute permission for gradlew
-      run: mv ./VirtualApp/* ./ && chmod +x gradlew
+      run: mv ./VirtualApp/* ./ && rm -rf VirtualApp && chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
     - name: Store generated APK file
